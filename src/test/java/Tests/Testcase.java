@@ -25,7 +25,7 @@ public class Testcase {
 		capabilities.setCapability("ignoreProtectedModeSettings", true);
 		capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.ACCEPT);
 		capabilities.setCapability("browserstack.ie.enablePopups", "false");
-		System.setProperty("webdriver.ie.driver", "C:\\Users\\HOME\\Desktop\\IEDriverServer1.exe");
+		System.setProperty("webdriver.ie.driver", "D:\\Selenium\\IEDriverServer1.exe");
 		
 		 driver=new InternetExplorerDriver(capabilities);
 		

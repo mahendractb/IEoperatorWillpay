@@ -1,3 +1,4 @@
+
 package Pages;
 
 import java.util.ArrayList;
@@ -130,8 +131,9 @@ WebDriver driver;
 						String Destination= ds.getAttribute("value");
 						//System.out.println("Destination name:"+ds.getAttribute("value"));
 						//fw.write("\nDestination name:"+ds.getAttribute("value"));
-						
+						Thread.sleep(500);
 						ds.click();
+						Thread.sleep(500);
 						driver.switchTo().defaultContent();
 						driver.switchTo().frame("frameTime");
 						List<WebElement> time=driver.findElements(By.className("DestButton2"));
@@ -206,6 +208,8 @@ WebDriver driver;
 								Thread.sleep(500);
 								String win2="";
 								System.out.println("window sizert-------"+driver.getWindowHandles().size());
+								//driver.switchTo().defaultContent();
+								Thread.sleep(500);
 								for(String window:driver.getWindowHandles())
 								{
 									driver.switchTo().window(window);

@@ -28,12 +28,12 @@ WebDriver driver;
 		System.out.println("1");
 		 String[] dd=new String[10];
 		 
-		File f=new File("D:\\Seleniumworkspace\\CTBWillpay\\billpay.xlsx");//please provide the excel path here-------------->
+		File f=new File("D:\\Selenium\\IEOPeratorWillpay\\billpay.xlsx");//please provide the excel path here-------------->
 		 FileInputStream objfile = new FileInputStream(f);
 		 XSSFWorkbook wb= new XSSFWorkbook(objfile);
 		 XSSFSheet xs =wb.getSheet("Sheet1");
 		 System.out.println(xs.getLastRowNum());
-		 for(int i=1;i<=xs.getLastRowNum();i=i+4){
+		 for(int i=1;i<=xs.getLastRowNum();i=i+2){
 			 Row r=xs.getRow(i);
 			 Cell cp=r.getCell(3);
 			 String ty=cp.getStringCellValue();
@@ -58,7 +58,7 @@ WebDriver driver;
 				 Cell c2=r1.getCell(2);
 				 int s2=(int) c2.getNumericCellValue();
 				 Cell c3=r1.getCell(3);
-				 String sourcecity=c3.getStringCellValue();
+				 String sourcecity=c3.getStringCellValue();;
 				 SimpleDateFormat dt1 = new SimpleDateFormat("dd");
 				 String D=dt1.format(s1);
 				 System.out.println("day"+D);//starting day of the jounary 
@@ -80,7 +80,7 @@ WebDriver driver;
 					 dd[6]="";
 					 dd[7]="";
 				}
-				 		 
+				 	break;	 
 			 }
 		 }
 		 
@@ -125,7 +125,7 @@ WebDriver driver;
 		 }
 	
 	public void DataWrite(int id,List storedata) throws Exception{
-		File f=new File("D:\\Seleniumworkspace\\CTBWillpay\\ExceldataWrite.xlsx");
+		File f=new File("D:\\Selenium\\IEOPeratorWillpay\\ExceldataWrite.xlsx");
 		FileInputStream fin=new FileInputStream(f);
 		
 		XSSFWorkbook wb=new XSSFWorkbook(fin);
